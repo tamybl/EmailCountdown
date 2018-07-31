@@ -1,7 +1,7 @@
 <?php
 
 	//Leave all this stuff as it is
-	date_default_timezone_set('Europe/London');
+	date_default_timezone_set('America/Santiago');
 	include 'GIFEncoder.class.php';
 	include 'php52-fix.php';
 	$time = $_GET['time'];
@@ -18,12 +18,12 @@
 	$delay = 100;// milliseconds
 
 	$font = array(
-		'size' => 23, // Font size, in pts usually.
+		'size' => 30, // Font size, in pts usually.
 		'angle' => 0, // Angle of the text
 		'x-offset' => 7, // The larger the number the further the distance from the left hand side, 0 to align to the left.
 		'y-offset' => 30, // The vertical alignment, trial and error between 20 and 60.
 		'file' => __DIR__ . DIRECTORY_SEPARATOR . 'Futura.ttc', // Font path
-		'color' => imagecolorallocate($image, 55, 160, 130), // RGB Colour of the text
+		'color' => imagecolorallocate($image, 0, 0, 0), // RGB Colour of the text
 	);
 	for($i = 0; $i <= 60; $i++){
 		
@@ -60,7 +60,7 @@
 	}
 
 	//expire this image instantly
-	header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
+	header( 'Expires: Sat, 26 Jul 2019 05:00:00 GMT' );
 	header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
 	header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 	header( 'Cache-Control: post-check=0, pre-check=0', false );
